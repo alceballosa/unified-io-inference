@@ -227,7 +227,7 @@ def resize_and_pad(image: np.ndarray, size) -> Tuple[np.ndarray, np.ndarray]:
     image = _resize(image, scale_to)
   else:
     scale_to = (h, w)
-  image_mask = np.zeros(size, dtype=np.bool)
+  image_mask = np.zeros(size, dtype=bool)
   image_mask[:scale_to[0], :scale_to[1]] = True
   image = np.pad(
     image,
@@ -324,4 +324,3 @@ def normalize_image(image) -> np.ndarray:
   image -= BIAS.reshape((1, 1, 3))
   image /= SCALE.reshape((1, 1, 3))
   return image
-
