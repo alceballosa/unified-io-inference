@@ -16,5 +16,6 @@ ipywidgets==7.7.2
 # conda create -n uio python=3.8
 # conda activate uio
 # conda install cudatoolkit=11.4
-# pip install "jax[cuda11_cudnn85]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+# conda install -c nvidia cuda-nvcc
+# pip install "jax[cuda11_cudnn82]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 # ...follow instructions on the hf trx repo
